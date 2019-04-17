@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
         WebMapView webMapView = new WebMapView(webView);
 //        为了方便测试和打包将html放在了android assets文件夹中
         webMapView.loadMapHtml("index.html");
+//                访问远程url地址
+//        webMapView.loadUrl("http://gykj123.cn:9022/hnandroid/#/");
     }
 
     @Override

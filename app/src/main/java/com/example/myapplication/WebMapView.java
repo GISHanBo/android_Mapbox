@@ -38,7 +38,7 @@ public class WebMapView {
         webSettings.setUseWideViewPort(true); // 关键点
         webSettings.setAllowFileAccess(true); // 允许访问文件
         webSettings.setSupportZoom(true); // 支持缩放
-
+        webSettings.setDisplayZoomControls(false);
         webView.setDrawingCacheEnabled(true);
         webView.buildDrawingCache();
         webView.buildLayer();
@@ -58,6 +58,10 @@ public class WebMapView {
     public void loadMapHtml(String htmlName) {
         hasMap = true;
         webView.loadUrl("file:///android_asset/" + htmlName);
+    }
+    public void loadUrl(String url) {
+        hasMap = true;
+        webView.loadUrl(url);
     }
 
     /**
